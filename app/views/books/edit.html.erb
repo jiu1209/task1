@@ -1,0 +1,16 @@
+<div class="meto">
+<h2>Editing Book</h2>
+
+<%= form_for(@book) do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+
+	<h5>Title</h5>
+	 <%= f.text_field :title %>
+
+	 <h5>Body</h5>
+	 <%= f.text_area :body %>
+     <br><%= f.submit 'Update Book' %></br>
+     <br><%= link_to "Show", book_path %>
+     <%= link_to "Back", books_path %><br>
+<% end %>
+</div>
